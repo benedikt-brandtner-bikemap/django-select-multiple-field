@@ -13,7 +13,7 @@ def decode_csv_to_list(encoded):
     """
     delimiter = getattr(
         settings, 'SELECTMULTIPLEFIELD_DELIMITER', DEFAULT_DELIMITER)
-    chars_to_replace = ['[', ']', ' u\'', 'u\''  '\'' ]
+    chars_to_replace = ['[', ']', ' u\'', 'u\'', '\'' ]
     for char in chars_to_replace:
         encoded = encoded.replace(char, '')
     if encoded == '':
